@@ -1,6 +1,6 @@
 const { test, expect } = require('@playwright/test');
 
-test.only("Login into new Applcation", async ({ page }) => {
+test("Login into new Applcation", async ({ page }) => {
 
     await page.goto("https://rahulshettyacademy.com/client")
     const email = "anshika@gmail.com"
@@ -74,7 +74,7 @@ await page.locator("[placeholder*='Country']").pressSequentially("ind", { delay:
     expect(foundOrder).toBeTruthy();
     const orderDetail = page.locator(".col-text").first();
     await orderDetail.waitFor();
-    
+
     const oderDetailID = await orderDetail.textContent();
     expect(oderID.includes(oderDetailID)).toBeTruthy();
 

@@ -1,10 +1,7 @@
 const { test, expect } = require("@playwright/test")
 test("Radio Buttons, checkboxes, asserstion examples for UI TEST", async ({ page }) => {
 
-
-
     page.goto("https://rahulshettyacademy.com/loginpagePractise/");
-
     const radioButton = page.locator(".radiotextsty");
     const dropdown = page.locator("select.form-control");
     const termsCheckBox = page.locator("#terms");
