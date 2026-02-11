@@ -26,6 +26,7 @@ test("Login into new Applcation", async ({ page }) => {
     // locator: Used for complex selectors that getBy methods don't cover
     const products = page.locator(".card-body")
     
+    // LOGIN SECTION - Using getBy methods for better readability and maintainability
     // ===== LOGIN SECTION =====
     // Fill email field
     await username.fill("anshika@gmail.com");
@@ -66,8 +67,6 @@ test("Login into new Applcation", async ({ page }) => {
     
     // Alternative checkout click (fallback - using text locator)
     // Kept as backup in case accessibility role method fails
-    await page.locator("text=Checkout").click();
-
 
     // ===== COUNTRY SELECTION =====
     // Type country name in dropdown using pressSequentially (types character by character)
